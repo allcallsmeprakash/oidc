@@ -27,8 +27,5 @@ jobs:
       - name: Terraform Init
         run: terraform init -backend-config="key=oidc/terraform.tfstate"
 
-      - name: Terraform Apply
-        run: terraform apply -auto-approve
-
-      - name: Show IAM Role ARN
-        run: terraform output github_oidc_role_arn
+      - name: Terraform destroy
+        run: terraform destroy -auto-approve
