@@ -29,7 +29,8 @@ resource "aws_iam_role" "github_oidc_role" {
             "token.actions.githubusercontent.com:aud": "sts.amazonaws.com"
           },
           StringLike = {
-            "token.actions.githubusercontent.com:sub": "repo:allcallsmeprakash/usecase*:*"
+            "token.actions.githubusercontent.com:sub": "repo:allcallsmeprakash/usecase*:*",
+            "token.actions.githubusercontent.com:sub": "repo:allcallsmeprakash/oktaapp:*"
           }
         }
       }
